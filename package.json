@@ -18,8 +18,7 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"mytest": "mocha --recursive --timeout 10000 ./src/test/e2e/test.js",
-		"test": "react-scripts test --env=jsdom",
+		"test": "mocha --recursive --timeout 10000 ./src/test/e2e/test.js",
 		"eject": "react-scripts eject"
 	}
 }
