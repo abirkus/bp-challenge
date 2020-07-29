@@ -1,6 +1,6 @@
 require('chromedriver')
 const assert = require('assert')
-const {Builder, Key, By, until} = require('selenium-webdriver')
+const {Builder, By} = require('selenium-webdriver')
 describe('BP Challenge', () => {
 	let driver
 	let matrix = []
