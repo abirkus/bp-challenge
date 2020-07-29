@@ -32,21 +32,29 @@ describe('BP Challenge', () => {
 	})
 
 	it('Fill out solutions input form and submit', async () => {
-		// await driver.findElement(By.css('input[data-test-id=submit-1]')).click()
-		// await driver
-		// 	.findElement(By.css('input[data-test-id=submit-1]'))
-		// 	.sendKeys(`${answers[0]}`)
-		// await driver.findElement(By.css('input[data-test-id=submit-2]')).click()
-		// await driver
-		// 	.findElement(By.css('input[data-test-id=submit-2]'))
-		// 	.sendKeys(`${answers[1]}`)
-		// await driver.findElement(By.css('input[data-test-id=submit-3]')).click()
-		// await driver
-		// 	.findElement(By.css('input[data-test-id=submit-3]'))
-		// 	.sendKeys(`${answers[2]}`)
+		await driver.findElement(By.css('input[data-test-id=submit-1]')).click()
+		await driver
+			.findElement(By.css('input[data-test-id=submit-1]'))
+			.sendKeys(`${answers[0]}`)
+		await driver.findElement(By.css('input[data-test-id=submit-2]')).click()
+		await driver
+			.findElement(By.css('input[data-test-id=submit-2]'))
+			.sendKeys(`${answers[1]}`)
+		await driver.findElement(By.css('input[data-test-id=submit-3]')).click()
+		await driver
+			.findElement(By.css('input[data-test-id=submit-3]'))
+			.sendKeys(`${answers[2]}`)
+		await driver.findElement(By.css('input[data-test-id=submit-4]')).click()
+		await driver
+			.findElement(By.css('input[data-test-id=submit-4]'))
+			.sendKeys('Andre Birkus')
+
+		const btn = await driver
+			.findElement(By.css('button[data-test-id=final-submit]'))
+			.click()
 	})
 
-	//after(() => driver && driver.quit())
+	after(() => driver && driver.quit())
 })
 
 const findNumBetweenMatchingSums = (arr) => {
